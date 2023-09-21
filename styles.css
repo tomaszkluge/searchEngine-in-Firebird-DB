@@ -1,0 +1,180 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+header {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: initial;
+}
+
+a:hover {
+
+  color: darkslategrey;
+}
+
+.find {
+  text-align: center;
+}
+
+#searchTerm {
+  margin-top: 10px;
+}
+
+main {
+  padding: 20px;
+}
+
+#results::before,
+#results::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#results {
+  padding: 10px;
+}
+
+#results div {
+  background-color: lightgrey;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  flex: 1 0 calc(25% - 20px);
+  text-align: left;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#results .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+#results .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 6px solid #333;
+  border-color: #333 transparent #333 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  z-index: 1000;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.no-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.server-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: white;
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+
+
+.matching-result {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.black {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  font-weight: 500;
+  background-color: lightgrey;
+  text-transform: uppercase;
+}
+
+li {
+  margin-right: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #results div {
+    flex-basis: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  #results div {
+    flex-basis: calc(100% - 20px);
+  }
+}

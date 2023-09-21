@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>System Zgłoszeń - Search Engine</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Wyszukaj zgłoszenie</h1>
+      <input
+        type="text"
+        id="searchTerm"
+        placeholder="Wpisz słowo lub frazę..."
+        title="Wprowadź co najmniej 3 znaki"
+      />
+
+      <button onclick="search()">Szukaj</button>
+    </header>
+
+    <main>
+      <div class="status">
+        <ul>
+          <li style="color: red">Zgłoszony</li>
+          <li style="color: blue">Do testów</li>
+          <li style="color: green">Sprawdzony</li>
+          <li style="color: black">Zamknięty</li>
+        </ul>
+      </div>
+      <p id="quantity" class="czas"></p>
+      <p id="czas" class="czas"></p>
+
+      <div id="results"></div>
+    </main>
+    <script>
+      window.onload = function () {
+        search()
+      };
+    </script>
+    <script src="fetch.js"></script>
+  </body>
+</html>
